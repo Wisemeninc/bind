@@ -6,5 +6,4 @@
 // organization
 
 // include "/etc/bind/zones.rfc1918";
-
-
+zone "airgapped.cc"      { type master; file "/etc/bind/airgapped.cc.zone"; };
