@@ -24,7 +24,7 @@ options {
     listen-on port 53 { any; };
     allow-query { any; };
     allow-transfer  { none; };
-    recursion no;
+    recursion yes;
 
 	notify yes;
 };

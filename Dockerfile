@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.20
 
 LABEL maintainer="andrey.mikhalchuk@conceptant.com"
 LABEL version="0.0.1.1"
