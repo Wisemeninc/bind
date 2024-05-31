@@ -1,7 +1,7 @@
 #!/bin/sh
 if [ ! -f /etc/bind/named.conf ]; then
-    mkdir -p /var/cache/bind
-    chown -R bind /var/cache/bind
+    mkdir -p /var/named
+    chown -R bind /var/named
     cp -a etc_bind/* /etc/bind
 fi
 
