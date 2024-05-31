@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM ubuntu:24.04
 
 LABEL maintainer="andrey.mikhalchuk@conceptant.com"
 LABEL version="0.0.1.1"
@@ -7,14 +7,14 @@ LABEL "com.conceptant.vendor"="Conceptant, Inc."
 
 COPY files .
 
-RUN apk update \
-    && apk add \
-        bind \
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        bind9 \
         vim \
-        bind-tools \
+        dnsutils \
     && chmod +x entrypoint.sh
 
-VOLUME /var/named /etc/bind
+VOLUME /var/cache/bind /etc/bind
 
 EXPOSE 53/tcp 53/udp
 
